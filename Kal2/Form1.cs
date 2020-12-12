@@ -129,6 +129,8 @@ namespace Kal2
             {
                 e.Handled = true;
             }
+
+
         }
 
         private void textBox3_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -139,6 +141,8 @@ namespace Kal2
             {
                 e.Handled = true;
             }
+
+            
         }
     }
 }
