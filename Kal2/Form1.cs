@@ -42,6 +42,23 @@ namespace Kal2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            double num = 0.0;
+            if (!double.TryParse(textBox1.Text, out num))
+            {
+                MessageBox.Show("Ошибка в числе X0");
+                return;
+            }
+            if (!double.TryParse(textBox2.Text, out num))
+            {
+                MessageBox.Show("Ощибка в числе Xmax");
+                return;
+            }
+            if (!double.TryParse(textBox3.Text, out num))
+            {
+                MessageBox.Show("Ошибка в шаге dx");
+                return;
+            }
+
             double x = Convert.ToDouble(textBox1.Text);
             double xmax = Convert.ToDouble(textBox2.Text);
             double dx = Convert.ToDouble(textBox3.Text);
