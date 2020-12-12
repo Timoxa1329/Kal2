@@ -45,7 +45,52 @@ namespace Kal2
             double x = Convert.ToDouble(textBox1.Text);
             double xmax = Convert.ToDouble(textBox2.Text);
             double dx = Convert.ToDouble(textBox3.Text);
-            double y = y = x(x * x - 2) / (Math.Sqrt(x + 2) - 1);
+            double y = y = (x * x - 2) / (Math.Sqrt(x + 2) - 1);
+            double min = y;
+            double max = y;
+            double n = 1;
+            double Sr = 0;
+
+            this.chart1.Series[0].Points.Clear();
+
+            while (x <= xmax)
+            {
+                y = (x * x - 2) / (Math.Sqrt(x + 2) - 1);
+
+                if (y >= max)
+                {
+                    max = y;
+                }
+                if (y <= min)
+                {
+                    min = y;
+                }
+
+                this.chart1.Series[0].Points.AddXY(x, y);
+
+                x = x + dx;
+                n = n + 1;
+                Sr = Sr + y;
+            }
+
+            Sr = Sr / n;
+
+            if (radioButton1.Checked)
+            {
+                label5.Text = "min y(x) = " + Convert.ToDouble(min);
+            }
+            if (radioButton2.Checked)
+            {
+                label5.Text = "max y(x) = " + Convert.ToDouble(max);
+            }
+            if (radioButton3.Checked)
+            {
+                label5.Text = "Sr y(x) = " + Convert.ToDouble(Sr);
+            }
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
 
         }
     }
