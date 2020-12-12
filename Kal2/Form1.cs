@@ -93,5 +93,35 @@ namespace Kal2
         {
 
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8 && ch != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8 && ch != 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8 && ch != 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
