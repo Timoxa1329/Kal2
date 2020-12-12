@@ -15,6 +15,18 @@ namespace Kal2
         public Form1()
         {
             InitializeComponent();
+            label1.Text = "y = (x2-2) / (sqrt(x2-2)-1)";
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
